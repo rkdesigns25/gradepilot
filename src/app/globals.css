@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 247 247 251;
+    --foreground: 15 15 26;
+    --card: 255 255 255;
+    --card-foreground: 15 15 26;
+    --popover: 255 255 255;
+    --popover-foreground: 15 15 26;
+    --primary: 124 92 255;
+    --primary-foreground: 255 255 255;
+    --secondary: 159 122 234;
+    --secondary-foreground: 255 255 255;
+    --muted: 241 241 247;
+    --muted-foreground: 107 107 128;
+    --accent: 139 92 246;
+    --accent-foreground: 255 255 255;
+    --border: 228 228 240;
+    --input: 228 228 240;
+    --ring: 124 92 255;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 15 15 26;
+    --foreground: 240 240 255;
+    --card: 22 22 38;
+    --card-foreground: 240 240 255;
+    --popover: 22 22 38;
+    --popover-foreground: 240 240 255;
+    --primary: 124 92 255;
+    --primary-foreground: 255 255 255;
+    --secondary: 159 122 234;
+    --secondary-foreground: 255 255 255;
+    --muted: 30 30 52;
+    --muted-foreground: 160 160 180;
+    --accent: 139 92 246;
+    --accent-foreground: 255 255 255;
+    --border: 40 40 70;
+    --input: 40 40 70;
+    --ring: 124 92 255;
+  }
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-secondary: rgb(var(--secondary));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-accent: rgb(var(--accent));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+  --color-violet-brand: #7C5CFF;
+  --color-violet-light: #9F7AEA;
+  --color-violet-accent: #8B5CF6;
+  --font-sans: var(--font-inter);
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+* {
+  border-color: rgb(var(--border));
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass card styles */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+  background: rgba(22, 22, 38, 0.6);
+  border: 1px solid rgba(124, 92, 255, 0.2);
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(124, 92, 255, 0.15);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #7C5CFF, #9F7AEA, #C084FC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 40px rgba(124, 92, 255, 0.3);
+}
+
+.glow-purple-sm {
+  box-shadow: 0 0 20px rgba(124, 92, 255, 0.2);
+}
+
+/* Gradient bg */
+.gradient-bg {
+  background: linear-gradient(135deg, #7C5CFF 0%, #9F7AEA 50%, #C084FC 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 92, 255, 0.5);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 92, 255, 0.8);
+}
+
+/* Animated gradient orb */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(5deg); }
+  66% { transform: translateY(10px) rotate(-5deg); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 92, 255, 0.3); }
+  50% { box-shadow: 0 0 50px rgba(124, 92, 255, 0.6), 0 0 80px rgba(159, 122, 234, 0.3); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* Number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 0.5;
+}
