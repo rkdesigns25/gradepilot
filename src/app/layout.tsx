@@ -15,6 +15,15 @@ export const metadata: Metadata = {
   description:
     "Smart calculators for GPA, attendance, and marks. Calculate SGPA, CGPA, attendance percentage and more. Free, fast, and private.",
   keywords: ["SGPA calculator", "CGPA calculator", "attendance calculator", "GPA calculator", "grade calculator"],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "icon", type: "image/png", sizes: "32x32", url: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
+    ],
+  },
   openGraph: {
     title: "GradePilot — Free Academic Calculators for Students",
     description: "Smart calculators for GPA, attendance, and marks. Work smarter, not harder.",
