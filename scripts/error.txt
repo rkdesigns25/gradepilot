@@ -1,0 +1,4 @@
+Error: C:\Users\shett\gradepilot\public\temp-ico-src.png is not or a valid PNG file.
+    at readPNG (file:///C:/Users/shett/gradepilot/node_modules/png-to-ico/lib/png.js:16:9)
+    at async default (file:///C:/Users/shett/gradepilot/node_modules/png-to-ico/index.js:17:14)
+    at async generateFavicons (C:\Users\shett\gradepilot\scripts\generate-favicons.js:46:17)
