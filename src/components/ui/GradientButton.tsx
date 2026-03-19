@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { ReactNode } from "react"
+import { memo, ReactNode } from "react"
 
 interface GradientButtonProps {
   children: ReactNode
@@ -14,7 +14,7 @@ interface GradientButtonProps {
   disabled?: boolean
 }
 
-export function GradientButton({
+export const GradientButton = memo(function GradientButton({
   children,
   onClick,
   className,
@@ -58,4 +58,4 @@ export function GradientButton({
       {children}
     </motion.button>
   )
-}
+})

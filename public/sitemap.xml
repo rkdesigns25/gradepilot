@@ -480,4 +480,25 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Global GPA Pages — Added after international expansion -->
+  <url>
+    <loc>https://gradepilot-tools.vercel.app/gpa-calculator-usa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gradepilot-tools.vercel.app/uk-grade-calculator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gradepilot-tools.vercel.app/gpa-calculator-canada</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gradepilot-tools.vercel.app/australia-gpa-calculator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

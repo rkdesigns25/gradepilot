@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
-import { ReactNode } from "react"
+import { memo, ReactNode } from "react"
 
 interface GlassCardProps {
   children: ReactNode
@@ -11,7 +11,7 @@ interface GlassCardProps {
   glow?: boolean
 }
 
-export function GlassCard({ children, className, hover = false, glow = false }: GlassCardProps) {
+export const GlassCard = memo(function GlassCard({ children, className, hover = false, glow = false }: GlassCardProps) {
   return (
     <motion.div
       whileHover={hover ? { y: -4, scale: 1.01 } : undefined}
@@ -27,4 +27,4 @@ export function GlassCard({ children, className, hover = false, glow = false }: 
       {children}
     </motion.div>
   )
-}
+})
