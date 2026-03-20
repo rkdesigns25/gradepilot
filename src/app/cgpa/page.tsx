@@ -1,7 +1,7 @@
 import { CGPACalculator } from "@/components/calculators/CGPACalculator"
 import { BookOpen } from "lucide-react"
 import type { Metadata } from "next"
-import { FAQSchema, HowToSchema, SoftwareApplicationSchema } from "@/components/seo/JsonLd"
+import { FAQSchema, HowToSchema, SoftwareApplicationSchema, BreadcrumbSchema } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "CGPA Calculator + Percentage Converter (Free & Instant)",
@@ -107,6 +107,10 @@ export default function CGPAPage() {
           description="A precise Cumulative Grade Point Average calculator and CGPA to percentage converter."
           applicationCategory="EducationalApplication"
         />
+        <BreadcrumbSchema items={[
+          { name: "Home", href: "/" },
+          { name: "CGPA Calculator", href: "/cgpa" }
+        ]} />
       </section>
     </div>
   )

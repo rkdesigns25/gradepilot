@@ -1,6 +1,6 @@
 import { SGPACalculator } from "@/components/calculators/SGPACalculator"
 import { Calculator } from "lucide-react"
-import { FAQSchema, HowToSchema, SoftwareApplicationSchema } from "@/components/seo/JsonLd"
+import { FAQSchema, HowToSchema, SoftwareApplicationSchema, BreadcrumbSchema } from "@/components/seo/JsonLd"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -112,6 +112,10 @@ export default function SGPAPage() {
           description="A free online tool to calculate Semester Grade Point Average with multi-country grading support."
           applicationCategory="EducationalApplication"
         />
+        <BreadcrumbSchema items={[
+          { name: "Home", href: "/" },
+          { name: "SGPA Calculator", href: "/sgpa" }
+        ]} />
       </section>
     </div>
   )

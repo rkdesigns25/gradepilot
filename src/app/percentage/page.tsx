@@ -1,7 +1,7 @@
 import { PercentageCalculator } from "@/components/calculators/PercentageCalculator"
 import { Percent } from "lucide-react"
 import type { Metadata } from "next"
-import { FAQSchema, SoftwareApplicationSchema } from "@/components/seo/JsonLd"
+import { FAQSchema, SoftwareApplicationSchema, BreadcrumbSchema } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Academic Percentage Calculator (Marks to Target Percentage)",
@@ -90,6 +90,10 @@ export default function PercentagePage() {
           description="A fast student calculator to convert test marks into absolute percentages."
           applicationCategory="EducationalApplication"
         />
+        <BreadcrumbSchema items={[
+          { name: "Home", href: "/" },
+          { name: "Percentage Calculator", href: "/percentage" }
+        ]} />
       </section>
     </div>
   )

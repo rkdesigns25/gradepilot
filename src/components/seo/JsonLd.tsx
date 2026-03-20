@@ -100,12 +100,18 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: item.name,
-      item: item.href,
-    })),
+    itemListElement: items.map((item, i) => {
+      const isAbsolute = item.href.startsWith("http");
+      const cleanHref = item.href.startsWith("/") ? item.href : `/${item.href}`;
+      const absoluteUrl = isAbsolute ? item.href : `https://gradepilot-tools.vercel.app${cleanHref}`;
+      
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        name: item.name,
+        item: absoluteUrl,
+      };
+    }),
   }
 
   return (

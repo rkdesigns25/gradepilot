@@ -1,7 +1,7 @@
 import { AttendanceCalculator } from "@/components/calculators/AttendanceCalculator"
 import { BarChart3 } from "lucide-react"
 import type { Metadata } from "next"
-import { FAQSchema, SoftwareApplicationSchema } from "@/components/seo/JsonLd"
+import { FAQSchema, SoftwareApplicationSchema, BreadcrumbSchema } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Attendance Calculator | Know Exactly How Many Classes You Can Skip",
@@ -92,6 +92,10 @@ export default function AttendancePage() {
           description="A free college attendance tracker and calculator that reports class skipping allowances."
           applicationCategory="EducationalApplication"
         />
+        <BreadcrumbSchema items={[
+          { name: "Home", href: "/" },
+          { name: "Attendance Calculator", href: "/attendance" }
+        ]} />
       </section>
     </div>
   )

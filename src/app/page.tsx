@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Calculator, BookOpen, BarChart3, Percent, ArrowRight, Star, Shield, Zap, CheckCircle } from "lucide-react"
 import { GlassCard } from "@/components/ui/GlassCard"
 import { GradientButton } from "@/components/ui/GradientButton"
-import { FAQSchema, SoftwareApplicationSchema } from "@/components/seo/JsonLd"
+import { FAQSchema, SoftwareApplicationSchema, BreadcrumbSchema } from "@/components/seo/JsonLd"
 
 const tools = [
   {
@@ -372,6 +372,7 @@ export default function HomePage() {
           description="A comprehensive suite of academic tools including SGPA, CGPA, Attendance, and Percentage calculators for global university students."
           applicationCategory="EducationalApplication"
         />
+        <BreadcrumbSchema items={[{ name: "Home", href: "/" }]} />
       </section>
     </div>
   )
