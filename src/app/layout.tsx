@@ -11,13 +11,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "GradePilot — Free Academic Calculators for Students",
+  title: "GradePilot: Free Academic & GPA Calculators for Students",
   description:
-    "Smart calculators for GPA, attendance, and marks. Calculate SGPA, CGPA, attendance percentage and more. Free, fast, and private.",
-  keywords: ["SGPA calculator", "CGPA calculator", "attendance calculator", "GPA calculator", "grade calculator"],
+    "The most accurate suite of online academic calculators. Instantly calculate SGPA, CGPA, Attendance %, and Grades for students in India, USA, UK, Canada & Australia.",
+  keywords: ["student academic calculators", "college gpa calculator", "grade calculator online", "free academic tools", "gpa calculator usa", "uk grading calculator", "sgpa calculator"],
   openGraph: {
-    title: "GradePilot — Free Academic Calculators for Students",
-    description: "Smart calculators for GPA, attendance, and marks. Work smarter, not harder.",
+    title: "GradePilot: Free Academic & GPA Calculators for Students Globally",
+    description: "The most accurate suite of online academic calculators. Instantly calculate SGPA, CGPA, Attendance %, and Grades.",
     type: "website",
   },
   verification: {

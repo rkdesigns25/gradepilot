@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Calculator, BookOpen, BarChart3, Percent, ArrowRight, Star, Shield, Zap, CheckCircle } from "lucide-react"
 import { GlassCard } from "@/components/ui/GlassCard"
 import { GradientButton } from "@/components/ui/GradientButton"
+import { FAQSchema, SoftwareApplicationSchema } from "@/components/seo/JsonLd"
 
 const tools = [
   {
@@ -309,6 +310,68 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
+      </section>
+
+      {/* 
+        ========================================================================
+        SEO CONTENT INJECTION (Below the fold)
+        ======================================================================== 
+      */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30 border-t border-border/50">
+        <div className="max-w-4xl mx-auto prose prose-violet dark:prose-invert">
+          <h2 className="text-3xl font-bold tracking-tight mb-6">Top Academic Tools for College Students</h2>
+          <p>
+            Navigating college academics requires precision. GradePilot provides the most accurate suite of <strong>free student academic calculators</strong> online. Whether you are tracking your <strong>Semester Grade Point Average (SGPA)</strong> after a tough exam cycle, converting your <strong>Cumulative GPA (CGPA)</strong> into a percentage for job placements, or calculating exactly how many classes you can afford to skip, our platform is designed to give you instant, reliable answers.
+          </p>
+          
+          <h2 className="text-2xl font-bold mt-10 mb-4">Global Grading Systems Supported</h2>
+          <p>
+            Unlike region-specific tools, GradePilot is built as a truly global <strong>grade calculator online</strong>. We natively support:
+          </p>
+          <ul>
+            <li><strong>India (UGC/AICTE):</strong> Standard 10-point scale CBCS systems used across VTU, Mumbai University, Anna University, and more.</li>
+            <li><strong>USA (4.0 Scale):</strong> Traditional letter grade weighting (A=4.0, A-=3.7) used natively by the <strong>college GPA calculator</strong> engine.</li>
+            <li><strong>UK (Honours):</strong> Classification systems (First-class, 2:1, 2:2) to help UK students gauge their final degree outcome.</li>
+            <li><strong>Canada & Australia:</strong> 4.0 variants and 7.0 WAM (Weighted Average Mark) calculators seamlessly integrated.</li>
+          </ul>
+
+          <h3 className="text-xl font-bold mt-8 mb-3">Why accurate grade tracking matters</h3>
+          <p>
+            Your GPA is the primary metric evaluating your academic trajectory. Utilizing a <strong>free academic tool</strong> to monitor your grades semester-by-semester prevents unpleasant surprises during final year placements. Our calculators automatically handle the complex credit-weighting algorithms so you don't have to manually apply the conversion formulas.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-10 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-6 not-prose">
+            {[
+              { q: "Is GradePilot completely free to use?", a: "Yes, GradePilot is 100% free with no hidden fees, no required sign-ups, and absolutely no data tracking." },
+              { q: "How accurate is the SGPA and CGPA calculator?", a: "Our calculators use the exact academic formulas prescribed by global university standards (such as the UGC CBCS 10-point scale and the US 4.0 scale), ensuring 100% mathematical accuracy based on the credits and grades you input." },
+              { q: "Does the attendance calculator account for the 75% rule?", a: "Yes. The attendance calculator defaults to the standard 75% minimum required by most Indian universities, but you can manually adjust your target percentage to 80% or any other threshold required by your specific college." },
+              { q: "Can I use GradePilot on my mobile phone?", a: "Absolutely. GradePilot is a fully responsive Web Application optimized for seamless use on all mobile devices and tablets." },
+              { q: "Do you store my grades or attendance data?", a: "No. All calculations are performed strictly client-side within your own web browser. We do not store, track, or share any of your academic data." }
+            ].map((faq, i) => (
+              <div key={i} className="bg-background border border-border/50 rounded-xl p-5 shadow-sm">
+                <h3 className="font-bold text-lg mb-2">{faq.q}</h3>
+                <p className="text-muted-foreground">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* JSON-LD Schemas */}
+        <FAQSchema
+          faqs={[
+            { question: "Is GradePilot completely free to use?", answer: "Yes, GradePilot is 100% free with no hidden fees, no required sign-ups, and absolutely no data tracking." },
+            { question: "How accurate is the SGPA and CGPA calculator?", answer: "Our calculators use the exact academic formulas prescribed by global university standards (such as the UGC CBCS 10-point scale and the US 4.0 scale), ensuring 100% mathematical accuracy based on the credits and grades you input." },
+            { question: "Does the attendance calculator account for the 75% rule?", answer: "Yes. The attendance calculator defaults to the standard 75% minimum required by most Indian universities, but you can manually adjust your target percentage to 80% or any other threshold required by your specific college." },
+            { question: "Can I use GradePilot on my mobile phone?", answer: "Absolutely. GradePilot is a fully responsive Web Application optimized for seamless use on all mobile devices and tablets." },
+            { question: "Do you store my grades or attendance data?", answer: "No. All calculations are performed strictly client-side within your own web browser. We do not store, track, or share any of your academic data." }
+          ]}
+        />
+        <SoftwareApplicationSchema
+          name="GradePilot Academic Calculators"
+          description="A comprehensive suite of academic tools including SGPA, CGPA, Attendance, and Percentage calculators for global university students."
+          applicationCategory="EducationalApplication"
+        />
       </section>
     </div>
   )
