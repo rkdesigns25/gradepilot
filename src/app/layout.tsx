@@ -20,9 +20,6 @@ export const metadata: Metadata = {
     description: "The most accurate suite of online academic calculators. Instantly calculate SGPA, CGPA, Attendance %, and Grades.",
     type: "website",
   },
-  verification: {
-    google: "jPTUB2m2wwVlWWa8RN8oMdykBtB3rh8DmxCiULqgNDE",
-  },
   manifest: "/manifest.json",
   icons: {
     icon: [
